@@ -13,7 +13,7 @@ across various dimensions such as **Category**, **Ad Type**, **ASIN**, and **Tim
 # 📂 Project Structure
 ## 🧾 Data Description
 
-The dataset contains monthly performance metrics from **Jan 2024 and Feb 2024**, and ** Jan 2025 to March 2025** broken down by ASIN, Category, and Ad Type
+The dataset contains monthly performance metrics from **Jan 2024 and Feb 2024**, and **Jan 2025 to March 2025** broken down by ASIN, Category, and Ad Type
 
 ### 🔑 Common Columns Used:
 - `Date`
@@ -32,10 +32,9 @@ The dataset contains monthly performance metrics from **Jan 2024 and Feb 2024**,
 
 For each sheet (`Product`, `Brand`, `Display`), the following transformations were applied:
 - Converted `Date` column to `Month-Year` format for trend analysis.
-- Removed null or irrelevant rows (e.g., blank ASINs).
+- Filled null values with relevant default values to ensure clean and consistent data analysis across all visuals.
 - Renamed columns for consistency and readability.
 - Ensured numeric data types for all metric columns.
-- Created a unified schema for all three ad types.
 
 ---
 ## 📈 Key Metrics and DAX Measures
@@ -55,7 +54,7 @@ For each sheet (`Product`, `Brand`, `Display`), the following transformations we
 
 ### 📌 Sheet 1: Sponsored Product
 **Slicers**: Month, Category, Ad Type  
-**KPI Cards**: Total Spend, Total Sales, Total Orders, CTR (%), Avg CPC, Conversion Rate (%)  
+**KPI Cards**: Total Spend, Total Sales, Total Orders, CTR (%), Avg CPC, Conversion Rate (%), ACOS and ROAS 
 **Charts**:
 1. 📈 CTR and Conversion Rate Trend (Line and Clustered Chart - Month vs. CTR & Conversion Rate)
 2. 📈 Sales and Spend Trend (Line and Clustered Chart)
